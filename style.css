@@ -1,0 +1,8 @@
+/* GENERAL STYLING */
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
