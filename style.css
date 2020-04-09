@@ -140,3 +140,56 @@ button:hover {
 .tabs button:hover {
   box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.15);
 }
+
+/* SUBMIT LOADER STYLES */
+.loader-container {
+  display: none;
+  background-color: rgba(255, 255, 255, 0.85);
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  height: 100%;
+}
+
+.loader {
+  border: 5px solid var(--light-grey);
+  border-radius: 50%;
+  border-top: 5px solid var(--primary);
+  width: 3.2rem;
+  height: 3.2rem;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+}
+
+/* ALERTS CONTAINER STYLES */
+.form-alerts {
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  color: var(--white);
+  padding: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.form-alerts button {
+  background-color: transparent;
+  color: var(--white);
+  height: 45px;
+  width: 45px;
+  position: absolute;
+  right: 0.3em;
+  top: 0.3em;
+  padding: 0.5rem;
+  border: 0;
+}
