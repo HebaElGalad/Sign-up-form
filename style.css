@@ -2,7 +2,7 @@
 :root {
   font-size: 16px;
   --primary: #02b3e4; /* sky-blue */
-  --primary-dark: #04a2ce; /* sky-blue */
+  --primary-dark: #04a2ce; /* dark sky-blue */
   --success: #00b25b; /* green-grass */
   --danger: #dc3545; /* dark-red */
   --white: #fff;
@@ -30,6 +30,7 @@ body {
   padding: 0;
 }
 
+/* FORM STYLES */
 main {
   padding: 2rem;
 }
@@ -115,4 +116,27 @@ button:hover {
 
 #sign-in-form {
   display: none;
+}
+
+/* TABS CONTAINER STYLES */
+.tabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.tabs button {
+  flex-basis: 50%;
+  padding: 1rem;
+  font-size: inherit;
+  text-transform: uppercase;
+  background: var(--white);
+}
+
+.tabs .sign-up-tab {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.tabs button:hover {
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.15);
 }
