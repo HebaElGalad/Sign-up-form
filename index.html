@@ -1,33 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign up | Robusta</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign up | Robusta</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <!-- SIGN UP FORM -->
+      <form id="sign-up-form">
+        <fieldset>
+          <legend>Create a new account</legend>
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" />
+            <span class="error-message">Please enter a name</span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" />
+            <span class="error-message">Please enter a valid email</span>
+          </div>
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" />
+            <span class="error-message">Please enter a username</span>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" />
+            <span class="error-message">Please enter a password</span>
+          </div>
+          <button type="submit">Sign up</button>
+        </fieldset>
+      </form>
+    </main>
 
-    <form action="https://private-b2e6827-robustatask.apiary-mock.com/auth/register" method="post">
-      <div class="form-group">
-        <span>Full Name</span>
-        <input type="text" id="username" />
-      </div>
-      <div class="form-group">
-        <span>Email</span>
-        <input type="text" id="username" />
-      </div>
-      <div class="form-group">
-        <span>Username</span>
-        <input type="text" id="username" />
-      </div>
-      <div class="form-group">
-        <span>Password</span>
-        <input type="password" id="password" />
-      </div>
-      <input type="submit" value="submit" />
-    </form>
+    <!-- JQuery Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
