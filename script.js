@@ -26,10 +26,10 @@ function formValidation(fieldName) {
 
 // Validate Email Field function
 function emailValidation(fieldName) {
-  if (!emailField.value || !emailField.value.match(emailRegex)) {
-    emailField.nextElementSibling.style.display = "inline-block";
-  } else if (emailField.value.match(emailRegex)) {
-    emailField.nextElementSibling.style.display = "none";
+  if (!fieldName.value || !fieldName.value.match(emailRegex)) {
+    fieldName.nextElementSibling.style.display = "inline-block";
+  } else if (fieldName.value.match(emailRegex)) {
+    fieldName.nextElementSibling.style.display = "none";
   }
 }
 
@@ -73,12 +73,12 @@ $("#sign-up-form").submit(function (event) {
       success: function (res) {
         $(".loader-container").css("display", "none");
         $(".form-alerts").css({ display: "flex", backgroundColor: "#00b25b" });
-        $(".form-alerts span").text(`${res.responseJSON.message}`);
+        $(".form-alerts span").text(`${res.message}`);
       },
       error: function (err) {
         $(".loader-container").css("display", "none");
         $(".form-alerts").css({ display: "flex", backgroundColor: "#dc3545" });
-        $(".form-alerts span").text(`${err.responseJSON.message}`);
+        $(".form-alerts span").text(`${err.message}`);
       },
       dataType: "json",
     });
@@ -118,12 +118,12 @@ $("#sign-in-form").submit(function (event) {
       success: function (res) {
         $(".loader-container").css("display", "none");
         $(".form-alerts").css({ display: "flex", backgroundColor: "#00b25b" });
-        $(".form-alerts span").text(`${res.responseJSON.message}`);
+        $(".form-alerts span").text(`${res.message}`);
       },
       error: function (err) {
         $(".loader-container").css("display", "none");
         $(".form-alerts").css({ display: "flex", backgroundColor: "#dc3545" });
-        $(".form-alerts span").text(`${err.responseJSON.message}`);
+        $(".form-alerts span").text(`${err.message}`);
       },
       dataType: "json",
     });
