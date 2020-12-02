@@ -1,6 +1,7 @@
 var API_URL = "https://private-b2e6827-robustatask.apiary-mock.com";
 var API_PATH_SIGNUP = "/auth/register";
 var API_PATH_SIGNIN = "/auth/login";
+// Remove ME
 
 //  Get Sign-up input fields
 const nameField = document.getElementById("name");
@@ -66,7 +67,7 @@ $("#sign-up-form").submit(function (event) {
     $.ajax({
       type: "POST",
       headers: {
-        "Content-Type": "application/json; charset=utf-8",
+        "Content-Type": "application/json; charset=utf-8"
       },
       url: `${API_URL}${API_PATH_SIGNUP}`,
       data: JSON.stringify(jsonObject),
@@ -80,7 +81,7 @@ $("#sign-up-form").submit(function (event) {
         $(".form-alerts").css({ display: "flex", backgroundColor: "#dc3545" });
         $(".form-alerts span").text(`${err.message}`);
       },
-      dataType: "json",
+      dataType: "json"
     });
   }
 });
@@ -111,7 +112,7 @@ $("#sign-in-form").submit(function (event) {
     $.ajax({
       type: "POST",
       headers: {
-        "Content-Type": "application/json; charset=utf-8",
+        "Content-Type": "application/json; charset=utf-8"
       },
       url: `${API_URL}${API_PATH_SIGNIN}`,
       data: JSON.stringify(jsonObject),
@@ -125,7 +126,7 @@ $("#sign-in-form").submit(function (event) {
         $(".form-alerts").css({ display: "flex", backgroundColor: "#dc3545" });
         $(".form-alerts span").text(`${err.message}`);
       },
-      dataType: "json",
+      dataType: "json"
     });
   }
 });
